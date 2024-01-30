@@ -10,10 +10,11 @@ import {
     Twitter,
   } from "@material-ui/icons"
 
-
+import {mobile} from "../responsive"
 
 const Container = styled.div`
 display: flex;
+${mobile({flexDirection: "column"})}
 `
 
 const Left = styled.div`
@@ -51,7 +52,9 @@ margin-right: 20px;
 
 const Center = styled.div`
 flex: 1;
-padding: 20px;`;
+padding: 20px;
+${mobile({display: "none"})}
+`;
 
 const Title = styled.h3`
 margin-bottom: 30px;
@@ -73,6 +76,7 @@ margin-bottom: 10px;
 const Right = styled.div`
 flex: 1;
 padding: 20px;
+${mobile({backgroundColor: "#fff8f8"})}
 `
 
 const ContactItem = styled.div`
@@ -88,7 +92,7 @@ const Footer = () => {
   return (
 <Container>
     <Left><Logo>
-        KOFIA.KE
+        KOFIA_KE
         </Logo>
         <Desc>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.
@@ -129,11 +133,11 @@ const Footer = () => {
     <Right>
         <Title>Contact</Title>
         <ContactItem>
-            <Room style={{marginRight: "10px"}}/> 622 Dixie Path , South Tobinchester 98336</ContactItem>
+            <Room style={{marginRight: "10px"}}/> Nairobi, Kenya</ContactItem>
         <ContactItem>
-            <Phone style={{marginRight: "10px"}}/> +1 234 56 78</ContactItem>
+            <Phone style={{marginRight: "10px"}}/> +254-726258462</ContactItem>
         <ContactItem>
-            <MailOutline style={{marginRight: "10px"}}/></ContactItem>
+            <MailOutline style={{marginRight: "10px"}}/>KOFIA_KE.co.ke</ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
     </Right>
 </Container>  )
